@@ -178,7 +178,6 @@ public class RegistActivity extends AppCompatActivity
             case R.id.option2:
                 return false;
         }
-
         return false;
     }
 }
