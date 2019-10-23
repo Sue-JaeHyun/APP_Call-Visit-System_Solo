@@ -7,10 +7,15 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+
+
 
 import com.jaehyun.sue.outsidermanagement.Fragment.CallVisitFragment;
 import com.jaehyun.sue.outsidermanagement.Fragment.MyInfoFragment;
 import com.jaehyun.sue.outsidermanagement.Fragment.OutsiderManagementFragment;
+import com.jaehyun.sue.outsidermanagement.Fragment.SearchFragment;
 import com.jaehyun.sue.outsidermanagement.R;
 import com.jaehyun.sue.outsidermanagement.Fragment.ReportFragment;
 
@@ -57,6 +62,14 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case R.id.outsider_management_menu:
                     selectedFragment = new OutsiderManagementFragment();
+                    if( !(boolean) MainActivity.myInfoMap.get("officer") )
+                    {
+                        Toast.makeText(getApplicationContext(), "용사는 이용할 수 없는 서비스입니다.", Toast.LENGTH_SHORT).show();
+                        return false;
+                    }
+                    break;
+                case R.id.outsider_location:
+                    selectedFragment = new SearchFragment();
                     if( !(boolean) MainActivity.myInfoMap.get("officer") )
                     {
                         Toast.makeText(getApplicationContext(), "용사는 이용할 수 없는 서비스입니다.", Toast.LENGTH_SHORT).show();

@@ -26,6 +26,12 @@
         android:icon="@drawable/ic_playlist_add_check_black_24dp"
         app:showAsAction="ifRoom"/>
 
+    <item
+        android:id="@+id/outsider_location"
+        android:title="위치 확인"
+        android:icon="@drawable/ic_action_name_cloud"
+        app:showAsAction="ifRoom"/>
+
     <!--android:icon="@drawable/ic_baseline_search_24px"-->
 
 </menu>
