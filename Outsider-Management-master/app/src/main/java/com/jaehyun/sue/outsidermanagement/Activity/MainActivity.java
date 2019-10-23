@@ -1,5 +1,6 @@
 package com.jaehyun.sue.outsidermanagement.Activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
         {
             Fragment selectedFragment = null;
-
+            Activity selectedActivity = null;
             switch (menuItem.getItemId())
             {
                 case R.id.my_info_menu:

@@ -36,11 +36,11 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:text="계급"
-                android:background="@drawable/border1"/>
+                android:background="@drawable/border2"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -48,11 +48,11 @@
                 android:layout_weight="3"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:text="군번"
-                android:background="@drawable/border1"/>
+                android:background="@drawable/border2"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,11 +60,11 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:text="이름"
-                android:background="@drawable/border1"/>
+                android:background="@drawable/border2"/>
 
         </LinearLayout>
 
@@ -74,21 +74,21 @@
             android:layout_weight="2"
             android:gravity="center"
             android:textSize="20sp"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textStyle="bold"
             android:textAlignment="center"
             android:text="보고 일자"
-            android:background="@drawable/border1"/>
+            android:background="@drawable/border2"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="30sp"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/black"
             android:textStyle="bold"
             android:text="보고 내용"
-            android:background="@drawable/border1"/>
+            android:background="@drawable/border2"/>
 
     </LinearLayout>
 
@@ -99,6 +99,7 @@
         android:id="@+id/report_listView"
         android:choiceMode="singleChoice"
         android:layout_below="@id/title_linear_layout"
+        android:background="@color/colorwhite"
         android:layout_above="@id/bottom_linear_layout"/>
 
     <LinearLayout

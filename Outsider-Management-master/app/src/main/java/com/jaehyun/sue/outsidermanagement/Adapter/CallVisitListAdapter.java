@@ -74,11 +74,11 @@ public class CallVisitListAdapter extends BaseAdapter
 
         // Set attributes
         if ("관심".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#FB6F53"));
+            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#980000"));
         else if ("배려".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#FFF2CC"));
+            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#CEFBC9"));
         else if ("일반".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#A9D18E"));
+            this.callVisitItemLinearLayout.setBackgroundColor(Color.parseColor("#FAF4C0"));
 
         this.classTextView.setText(this.list.get(i).get("class").toString().trim());
         this.nameTextView.setText(this.list.get(i).get("name").toString().trim());

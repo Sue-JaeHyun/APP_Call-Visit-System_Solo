@@ -72,11 +72,11 @@ public class OutsiderManagementListAdapter extends BaseAdapter
 
         // Set attributes
         if ("관심".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#FB6F53"));
+            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#980000"));
         else if ("배려".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#FFF2CC"));
+            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#CEFBC9"));
         else if ("일반".equals(this.list.get(i).get("outsiderType").toString().trim()))
-            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#A9D18E"));
+            this.outsiderManagementItemLinearLayout.setBackgroundColor(Color.parseColor("#FAF4C0"));
 
         if( this.list.get(i).get("checked") instanceof Boolean )
         {

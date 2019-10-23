@@ -73,11 +73,11 @@ public class ReportListAdapter extends BaseAdapter
         if( (boolean) MainActivity.myInfoMap.get("officer") )
         {
             if ("관심".equals(this.list.get(i).get("outsiderType").toString().trim()))
-                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#FB6F53"));
+                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#980000"));
             else if ("배려".equals(this.list.get(i).get("outsiderType").toString().trim()))
-                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#FFF2CC"));
+                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#CEFBC9"));
             else if ("일반".equals(this.list.get(i).get("outsiderType").toString().trim()))
-                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#A9D18E"));
+                this.reportItemLinearLayout.setBackgroundColor(Color.parseColor("#FAF4C0"));
         }
 
         this.reportDateTextView.setText(this.list.get(i).get("reportDate").toString().trim());
