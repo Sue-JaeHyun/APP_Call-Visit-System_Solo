@@ -18,6 +18,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.jaehyun.sue.outsidermanagement.R;
+
 public class SearchFragment extends Fragment
         implements OnMapReadyCallback
 {
@@ -101,21 +102,15 @@ public class SearchFragment extends Fragment
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         LatLng SEOUL = new LatLng(37.56, 126.97);
-
         MarkerOptions markerOptions = new MarkerOptions();
-
         markerOptions.position(SEOUL);
-
         markerOptions.title("서울");
-
         markerOptions.snippet("수도");
-
         googleMap.addMarker(markerOptions);
-
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(13));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(new LatLng(46.56,126.97)));
+        googleMap.moveCamera(CameraUpdateFactory.zoomTo(9));
     }
 
 }
