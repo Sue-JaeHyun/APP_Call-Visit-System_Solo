@@ -32,8 +32,8 @@ import java.util.Map;
  */
 public class MyInfoFragment extends Fragment
 {
-    TextView idTextView, passwordTextView, fromTextView, classTextView, nameTextView, telTextView, supervisorTextView, startDateTextView, endDateTextView;
-    EditText passwordEditText, fromEditText, classEditText, nameEditText, telEditText, supervisorEditText, startDateEditText, endDateEditText;
+    TextView idTextView, passwordTextView, fromTextView, classTextView, nameTextView, telTextView, supervisorTextView, startDateTextView, endDateTextView, missionTextView, emailTextView, selfTextView;
+    EditText passwordEditText, fromEditText, classEditText, nameEditText, telEditText, supervisorEditText, startDateEditText, endDateEditText, missionEditText, emailEditText, selfEditText;
     Button logoutBtn, modifyBtn, saveBtn, cancelBtn;
 
     HashMap<String, Object> myInfoMap;
@@ -103,6 +103,7 @@ public class MyInfoFragment extends Fragment
         this.telTextView.setText(this.myInfoMap.get("tel").toString().trim());
         this.startDateTextView.setText(this.myInfoMap.get("startDate").toString().trim());
         this.endDateTextView.setText(this.myInfoMap.get("endDate").toString().trim());
+
 
         if( !(boolean) this.myInfoMap.get("officer") )
             this.supervisorTextView.setText(this.myInfoMap.get("supervisorId").toString().trim());

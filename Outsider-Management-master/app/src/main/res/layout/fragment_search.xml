@@ -13,6 +13,16 @@
         android:text="위도"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="22dp"
+        android:text="경도"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"
@@ -51,16 +61,6 @@
 
         <requestFocus />
     </EditText>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="22dp"
-        android:text="경도"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/button1"
@@ -110,5 +110,4 @@
         android:text="지도2" />
 
 
-    출처: https://bitsoul.tistory.com/135?category=623707 [Happy Programmer~]
 </LinearLayout>

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:layout_marginBottom="10sp"
-        android:text="Sign Up"
+        android:text="회 원 가 입"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="군번"
+                    android:text="군               번"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -126,7 +126,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="비밀번호"
+                    android:text="비   밀  번   호"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="소속"
+                    android:text="소               속"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -179,6 +179,7 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -190,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="계급"
+                    android:text="계               급"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -211,6 +212,7 @@
 
             </LinearLayout>
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -222,7 +224,39 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="이름"
+                    android:text="직               책"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10sp"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border3"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:id="@+id/mission_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="이               름"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -258,7 +292,7 @@
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
-                    android:text="연락처"
+                    android:text="연      락     처"
                     android:textSize="20sp"/>
 
                 <EditText
@@ -319,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="입대일"
+                    android:text="입      대     일"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -351,7 +385,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10sp"
                     android:layout_marginRight="10sp"
-                    android:text="전역일"
+                    android:text="전      역     일"
                     android:textColor="@android:color/black"
                     android:background="@drawable/border2"
                     android:textStyle="bold"
@@ -371,6 +405,72 @@
                     android:id="@+id/end_date_editText"/>
 
             </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="이      메     일"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10sp"
+                    android:background="@drawable/border3"
+                    android:textSize="20sp"
+                    android:inputType="date"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:id="@+id/email_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:text="자  기  소   개"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10sp"
+                    android:background="@drawable/border3"
+                    android:textSize="20sp"
+                    android:inputType="date"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:id="@+id/self_editText"/>
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"

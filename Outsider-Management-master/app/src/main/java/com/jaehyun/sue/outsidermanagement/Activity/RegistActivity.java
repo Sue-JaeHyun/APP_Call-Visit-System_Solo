@@ -21,7 +21,7 @@ public class RegistActivity extends AppCompatActivity
 {
     RadioGroup typeRadioGroup;
     EditText idEditText, passwordEditText, fromEditText, classEditText, nameEditText, telEditText,
-            supervisorEditText, startDateEditText, endDateEditText;
+            supervisorEditText, startDateEditText, endDateEditText, selfEditText, emailEditText, missionEditText;
     Button registBtn, cancelBtn;
 
     private HashMap<String, Object> myInfoMap;
@@ -55,6 +55,9 @@ public class RegistActivity extends AppCompatActivity
         this.supervisorEditText = findViewById(R.id.supervisor_editText);
         this.startDateEditText = findViewById(R.id.start_date_editText);
         this.endDateEditText = findViewById(R.id.end_date_editText);
+        this.selfEditText = findViewById(R.id.self_editText);
+        this.emailEditText = findViewById(R.id.email_editText);
+        this.missionEditText = findViewById(R.id.mission_editText);
         this.registBtn = findViewById(R.id.regist_btn);
         this.cancelBtn = findViewById(R.id.cancel_btn);
 
@@ -141,7 +144,9 @@ public class RegistActivity extends AppCompatActivity
                 myInfoMap.put("endDate", endDateEditText.getText().toString().trim());
                 myInfoMap.put("isOutsider", false);
                 myInfoMap.put("outsiderType", null);
-
+                myInfoMap.put("mission",missionEditText.getText().toString().trim());
+                myInfoMap.put("email",emailEditText.getText().toString().trim());
+                myInfoMap.put("self",selfEditText.getText().toString().trim());
                 if( !(boolean) myInfoMap.get("officer") )
                     myInfoMap.put("supervisorId", supervisorEditText.getText().toString().trim());
                 else
