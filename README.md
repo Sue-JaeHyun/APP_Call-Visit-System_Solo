@@ -7,13 +7,18 @@ Call-Visit-System - 군 내 현재 만연하고 있고 꺼내기 싫어하는 �
 개발자 : 중위 서재현
 ```
 ## Prerequisites(컴퓨터 구성 필수 조건 안내)
-1. android 9(API 28)
-
+```c
+android 9(API 28) 이상 권장
+```
 ## Installing the Source(설치안내)
-1. App 설치는 아래 링크에서 Apk파일을 다운받으시면 됩니다.
+```c
+App 설치는 아래 링크에서 Apk파일을 다운받으시면 됩니다.
+```
 
 ## Getting Started(사용법)
-1. App 세부 사용방법은 아래 링크를 참조하세요.
+```c
+App 세부 사용방법은 아래 링크를 참조하세요.
+```
 
 ## File Manifest(파일정보 및 목록)
 
@@ -52,6 +57,9 @@ Creating an issue on Github
 send me an email(aroa96@naver.com)
 ```
 ## Credit(크레딧)
+# 개발자
+* 중위 서재현
+# Thanks to 국방부 오픈소스 아카데미
 
 ## Change Log(업데이트 정보)
 ```c
