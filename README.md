@@ -40,13 +40,16 @@ mit license
 ```
 ## Contact Information(배포자 및 개발자의 연락처 정보)
 ```c
-github ID : Sue-JaeHyun / 010-2275-3556
+github ID : Sue-JaeHyun / 010-2275-3556 / aroa96@naver.com
 ```
-## Known Issues(알려진 버그)
-
+## Known Issues(알려진 버그 & 보완 사항)
+```c
+오픈소스 아카데미 취지에 맞게 회원관리가 보안성에 취약, 상용화 되기 위해서는 otp를 이용하거나 기타 방식 고려 필요.
+```
 ## Troubleshooting(문제발생에 대한 해결책)
 ```c
 Creating an issue on Github
+send me an email(aroa96@naver.com)
 ```
 ## Credit(크레딧)
 
