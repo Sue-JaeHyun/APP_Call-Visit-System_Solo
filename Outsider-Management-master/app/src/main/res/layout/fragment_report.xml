@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
     <TextView
@@ -15,8 +16,8 @@
         android:textColor="@android:color/black"
         android:id="@+id/title_textView"/>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:orientation="vertical"
+    <LinearLayout
+        android:orientation="vertical"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:id="@+id/title_linear_layout"
@@ -25,46 +26,35 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30sp"
+            android:layout_height="35sp"
             android:orientation="horizontal"
             android:background="@drawable/border1"
             android:id="@+id/subtitle_linear_layout">
 
-            <TextView
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:text="계급"
-                android:background="@drawable/border2"/>
+                android:background="@drawable/border2"
+                app:srcCompat="@drawable/ic_action_class_cloud" />
 
-            <TextView
+            <ImageView
+                android:id="@+id/imageView3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:text="군번"
-                android:background="@drawable/border2"/>
 
-            <TextView
+                android:background="@drawable/border2"
+                app:srcCompat="@drawable/ic_action_dogtag_cloud" />
+
+            <ImageView
+                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textColor="@android:color/black"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:text="이름"
-                android:background="@drawable/border2"/>
+                android:background="@drawable/border2"
+                app:srcCompat="@drawable/ic_action_name2_cloud" />
 
         </LinearLayout>
 
@@ -99,7 +89,7 @@
         android:id="@+id/report_listView"
         android:choiceMode="singleChoice"
         android:layout_below="@id/title_linear_layout"
-        android:background="@color/colorwhite"
+        android:background="@color/colorlightblue"
         android:layout_above="@id/bottom_linear_layout"/>
 
     <LinearLayout
@@ -137,11 +127,11 @@
         <Button
             android:id="@+id/locate_btn"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginRight="10sp"
+            android:textSize="20sp"
             android:focusable="false"
-            android:text="위치"
-            android:textSize="20sp" />
+            android:text="위치" />
 
     </LinearLayout>
 

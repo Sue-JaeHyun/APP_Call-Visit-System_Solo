@@ -22,8 +22,8 @@
             android:textColor="@android:color/black"
             android:layout_gravity="center"/>
 
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                      android:orientation="vertical"
+        <LinearLayout
+            android:orientation="vertical"
                       android:layout_width="match_parent"
                       android:layout_height="90sp"
                       android:background="#333">
@@ -32,42 +32,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="60sp"
                 android:orientation="horizontal">
-
-                <TextView
+                <ImageView
+                    android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="계급"
-                    android:background="@drawable/border2"/>
+                    android:background="@drawable/border2"
+                    app:srcCompat="@drawable/ic_action_class_cloud" />
 
-                <TextView
+
+                <ImageView
+                    android:id="@+id/imageView6"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="이름"
-                    android:background="@drawable/border2"/>
+                    android:background="@drawable/border2"
 
-                <TextView
+                    app:srcCompat="@drawable/ic_action_name2_cloud" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:gravity="center"
-                    android:textSize="20sp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="출타 일자"
-                    android:background="@drawable/border2"/>
+                    android:layout_weight="3"
+                    android:background="@drawable/border2"
+
+                    app:srcCompat="@drawable/ic_action_callender_cloud" />
+
 
             </LinearLayout>
 
