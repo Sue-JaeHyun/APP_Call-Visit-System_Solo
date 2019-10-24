@@ -561,6 +561,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:focusable="true"
+
                     app:srcCompat="@drawable/ic_action_convert_cloud" />
 
 
@@ -569,6 +571,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:focusable="true"
 
                     app:srcCompat="@drawable/ic_action_logout_cloud" />
 
