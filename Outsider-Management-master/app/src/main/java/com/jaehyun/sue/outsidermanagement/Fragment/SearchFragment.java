@@ -46,12 +46,9 @@ public class SearchFragment extends Fragment
     EditText l_editText,ll_editText;
     Button btn;
     Button btn2;
-    String lang = new String();
-    String llang = new String();
     GoogleMap googleMap;
     Double latitude = 0.0;
     Double longitude =0.0;
-
     LocationManager manager;
 
     @Override
@@ -129,7 +126,7 @@ public class SearchFragment extends Fragment
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(locate));
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
     }
-
+    //좌표 확인
     private void startLocationService()
     {
         manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);

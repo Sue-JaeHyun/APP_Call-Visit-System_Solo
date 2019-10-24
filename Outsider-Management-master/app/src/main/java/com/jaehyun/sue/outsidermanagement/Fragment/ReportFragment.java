@@ -1,8 +1,14 @@
 package com.jaehyun.sue.outsidermanagement.Fragment;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -31,12 +37,28 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.jaehyun.sue.outsidermanagement.R;
+
+
 public class ReportFragment extends Fragment
 {
     LinearLayout subtitleLinearLayout, bottomLinearLayout;
     ListView reportListView;
     EditText contentEditText;
     Button reportBtn;
+    Button locateBtn;
+
+    GoogleMap googleMap;
+    Double latitude = 0.0;
+    Double longitude =0.0;
+    LocationManager manager;
+
 
     ArrayList<HashMap<String, Object>> reportList;
     private ReportListAdapter adapter;
@@ -47,7 +69,6 @@ public class ReportFragment extends Fragment
     {
         this.fireStoreCallbackListener = listener;
     }
-
     View view;
 
     @Nullable
@@ -120,7 +141,7 @@ public class ReportFragment extends Fragment
                         return -o1.get("reportDate").toString().compareTo(o2.get("reportDate").toString());
                     }
                 });
-
+                startLocationService();
                 bindUI(view);
             }
         });
@@ -133,6 +154,67 @@ public class ReportFragment extends Fragment
                     "report", "memberId", MainActivity.myInfoMap.get("id").toString());
     }
 
+
+    //좌표 확인
+    private void startLocationService()
+    {
+        manager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+
+        long minTime = 1000;
+        float minDistance = 1;
+
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            Toast.makeText(getActivity(), "허가 받지 않았습니다", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,minTime,minDistance,mLocationListener);
+        manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER,minTime,minDistance,mLocationListener);
+    }
+
+    private void stopLocationService()
+    {
+        if (ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
+            Toast.makeText(getActivity(), "허가 받지 않았습니다", Toast.LENGTH_SHORT).show();
+            return;
+        }
+    }
+
+    private final LocationListener mLocationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+            latitude = location.getLatitude();
+            longitude = location.getLongitude();
+
+            stopLocationService();
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+
+        }
+    };
+
+
+
+
+
+
+
+
     private void bindUI(View view)
     {
         // Bind views
@@ -142,6 +224,8 @@ public class ReportFragment extends Fragment
         this.bottomLinearLayout = view.findViewById(R.id.bottom_linear_layout);
         this.contentEditText = view.findViewById(R.id.content_editText);
         this.reportBtn = view.findViewById(R.id.report_btn);
+
+        this.locateBtn = view.findViewById(R.id.locate_btn);
 
         // Set attributes
         this.reportListView.setAdapter(this.adapter);
@@ -219,6 +303,45 @@ public class ReportFragment extends Fragment
                 }
                 else
                     Toast.makeText(getContext(), "현재 출타 중이지 않아서 보고를 할 수 없습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        this.locateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Log.d("locateBtn","Clicked");
+                if ((boolean) MainActivity.myInfoMap.get("isOutsider"))
+                {
+                    final HashMap<String, Object> map = new HashMap<>();
+                    String now = new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date());
+
+                    map.put("outsiderType", MainActivity.myInfoMap.get("outsiderType"));
+                    map.put("memberId", MainActivity.myInfoMap.get("id"));
+                    map.put("supervisorId", MainActivity.myInfoMap.get("supervisorId"));
+                    map.put("class", MainActivity.myInfoMap.get("class"));
+                    map.put("name", MainActivity.myInfoMap.get("name"));
+                    map.put("reportDate", now);
+                    map.put("reportContent", MainActivity.myInfoMap.get("name")+ " 위치보고 드리겠습니다. \n현재 위도는"+ latitude + "경도는" + longitude + "늦지 않게 복귀하겠습니다.");
+                    map.put("tel", MainActivity.myInfoMap.get("tel"));
+
+                    contentEditText.setText("");
+
+                    InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(getActivity().getWindow().getCurrentFocus().getWindowToken(), 0);
+
+                    loadingDialog.show("Reporting now");
+
+                    FireStoreConnectionPool.getInstance().insertNoID(fireStoreCallbackListener, map, "report");
+                    FireStoreConnectionPool.getInstance().updateOne(fireStoreCallbackListener, "outsider",
+                            "memberId", MainActivity.myInfoMap.get("id").toString(), "startDate", "endDate", "reportDate", now);
+
+                    reportList.add(map);
+                    adapter.notifyDataSetChanged();
+                }
+                else
+                    Toast.makeText(getContext(), "현재 출타 중이지 않아서 보고를 할 수 없습니다.", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
