@@ -12,6 +12,44 @@ Call-Visit-System : 군 내 현재 만연하고 있고 꺼내기 싫어하는 �
 ```
 ![로그인](https://user-images.githubusercontent.com/44388935/67486868-cb29db00-f6a7-11e9-8089-878ce1b1fb51.PNG)
 
+```c
+2. 가입화면(용사와 간부 나눠서 가입 / 직속상관명 정확히 기입)
+```
+![가입](https://user-images.githubusercontent.com/44388935/67486920-e85ea980-f6a7-11e9-8cf8-d6f3e3bbc225.PNG)
+
+```c
+3. 본인 정보
+```
+![정보](https://user-images.githubusercontent.com/44388935/67487280-9b2f0780-f6a8-11e9-8ee7-42ceb7392a72.PNG)
+
+```c
+4. 상황,위치 보고(용사) - 직속상관밖에 볼 수 없으며 Call-Visit 뿐 아니라 상향식 일일결산, 마음의 편지로
+                         응용까지 가능하다. 위치버튼을 누르면 현재 위치의 GPS를 확인해 위도,경도가 출력된다.
+```
+![상황,위치보고(용사)](https://user-images.githubusercontent.com/44388935/67487152-658a1e80-f6a8-11e9-8c37-899a21bce1c7.PNG)
+
+```c
+5. 상황,위치 보고(간부) - 병력들의 보고현황이 들어오고 병력상태에 따라 색상이 달라진다.
+```
+![상황,위치보고](https://user-images.githubusercontent.com/44388935/67487207-7d61a280-f6a8-11e9-8198-64c8c1486147.PNG)
+
+```c
+6. 콜비짓 현황 관리 - 병력들로부터 마지막으로 콜비짓한 시간이 전송되고. 콜비짓을 미실시 했을 경우 전화버튼을
+                     누르면 미실시한 병력한테 전화가 걸린다.
+```
+![콜비짓현황](https://user-images.githubusercontent.com/44388935/67487330-b1d55e80-f6a8-11e9-91b0-c350e13a1a9b.PNG)
+
+```c
+7. 출타자 관리 - 출타자 상태를 추가하고 제거할 수 있으며, 병력 상태에 따라 색상을 부여한다.
+```
+![출타자 관리](https://user-images.githubusercontent.com/44388935/67487310-a7b36000-f6a8-11e9-9dc8-77b083d0ffb1.PNG)
+
+```c
+8. 위치조회 - 4,5번에서 확인한 병력 위치를 검색하면 지도상에 표기된다. 위수지역을 이탈했는지 안했는지 확인가능하고, 
+             복귀까지 소요되는 시간을 계산가능하다.
+```
+![위치 조회](https://user-images.githubusercontent.com/44388935/67487238-8c485500-f6a8-11e9-9a74-b80b96c986a3.PNG)
+
 
 ## Prerequisites(컴퓨터 구성 필수 조건 안내)
 ```c
