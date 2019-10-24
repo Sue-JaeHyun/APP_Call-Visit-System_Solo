@@ -4,10 +4,13 @@ Call-Visit-System - 군 내 현재 만연하고 있고 꺼내기 싫어하는 �
                     (출타자 현황관리, 추적관리, 상향식 일일결산, 마음의 편지 기능 보유)
 ```
 ## Prerequisites(컴퓨터 구성 필수 조건 안내)
+1. android 9(API 28)
 
-## INSTALLIN the Source(설치안내)
+## Installing the Source(설치안내)
 
 ## Getting Started(사용법)
+1. get Clone 후 apk 설치
+2. Apk 실행 
 
 ## File Manifest(파일정보 및 목록)
 
