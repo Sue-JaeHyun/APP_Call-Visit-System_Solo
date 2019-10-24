@@ -109,7 +109,7 @@ github ID : Sue-JaeHyun / 010-2275-3556 / aroa96@naver.com
 Creating an issue on Github
 send me an email(aroa96@naver.com)
 ```
-## Credit(크레딧)
+## Credit(크레딧) 
 * 개발자
   * 중위 서재현
 * Thanks to 국방부 오픈소스 아카데미
