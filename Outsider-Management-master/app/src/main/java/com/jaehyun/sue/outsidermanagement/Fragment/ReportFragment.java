@@ -322,7 +322,7 @@ public class ReportFragment extends Fragment
                     map.put("class", MainActivity.myInfoMap.get("class"));
                     map.put("name", MainActivity.myInfoMap.get("name"));
                     map.put("reportDate", now);
-                    map.put("reportContent", MainActivity.myInfoMap.get("name")+ " 위치보고 드리겠습니다. \n현재 위도는"+ latitude + "경도는" + longitude + "늦지 않게 복귀하겠습니다.");
+                    map.put("reportContent", MainActivity.myInfoMap.get("name")+ " 위치보고 드리겠습니다. \n현재 위치하고 있는 곳의 위도는"+ latitude + "경도는" + longitude + "늦지 않게 복귀하겠습니다.");
                     map.put("tel", MainActivity.myInfoMap.get("tel"));
 
                     contentEditText.setText("");

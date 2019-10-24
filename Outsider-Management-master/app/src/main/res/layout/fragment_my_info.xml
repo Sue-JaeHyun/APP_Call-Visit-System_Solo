@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
 
@@ -9,11 +10,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10sp"
         android:layout_marginBottom="10sp"
-        android:text="  내 정보"
+        android:text="내 정보"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
-        android:layout_gravity="left"/>
+        android:layout_gravity="center"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -536,39 +537,40 @@
                 android:gravity="right"
                 android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="로그아웃"
-                    android:textSize="20sp"
-                    android:id="@+id/logout_btn"
-                    android:focusable="false"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="수정"
-                    android:textSize="20sp"
-                    android:id="@+id/modify_btn"
-                    android:focusable="false"/>
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="저장"
-                    android:textSize="20sp"
-                    android:visibility="gone"
+                <ImageButton
                     android:id="@+id/save_btn"
-                    android:focusable="false"/>
-
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="취소"
-                    android:textSize="20sp"
-                    android:visibility="gone"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    app:srcCompat="@drawable/ic_action_regist_cloud" />
+
+                <ImageButton
                     android:id="@+id/cancel_btn"
-                    android:focusable="false"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:focusable="false"
+                    app:srcCompat="@drawable/ic_action_cancel_cloud" />
+
+
+
+                <ImageButton
+                    android:id="@+id/modify_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_action_convert_cloud" />
+
+
+                <ImageButton
+                    android:id="@+id/logout_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    app:srcCompat="@drawable/ic_action_logout_cloud" />
 
             </LinearLayout>
 

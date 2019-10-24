@@ -58,8 +58,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\question.png" />
-                                      <entry key="outputName" value="ic_action_question_cloud" />
+                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\1119893-military\1119893-military\png\020-satellite.png" />
+                                      <entry key="outputName" value="ic_action_sat_cloud" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="000000" />
                                     </map>

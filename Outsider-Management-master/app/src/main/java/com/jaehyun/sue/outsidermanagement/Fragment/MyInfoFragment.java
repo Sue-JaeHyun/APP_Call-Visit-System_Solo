@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.jaehyun.sue.outsidermanagement.Activity.LoginActivity;
@@ -34,7 +35,8 @@ public class MyInfoFragment extends Fragment
 {
     TextView idTextView, passwordTextView, fromTextView, classTextView, nameTextView, telTextView, supervisorTextView, startDateTextView, endDateTextView, missionTextView, emailTextView, selfTextView;
     EditText passwordEditText, fromEditText, classEditText, nameEditText, telEditText, supervisorEditText, startDateEditText, endDateEditText, missionEditText, emailEditText, selfEditText;
-    Button logoutBtn, modifyBtn, saveBtn, cancelBtn;
+    ImageButton  saveBtn, cancelBtn;
+    ImageButton logoutBtn,modifyBtn;
 
     HashMap<String, Object> myInfoMap;
     private FireStoreCallbackListener fireStoreCallbackListener;
@@ -103,7 +105,6 @@ public class MyInfoFragment extends Fragment
         this.telTextView.setText(this.myInfoMap.get("tel").toString().trim());
         this.startDateTextView.setText(this.myInfoMap.get("startDate").toString().trim());
         this.endDateTextView.setText(this.myInfoMap.get("endDate").toString().trim());
-
 
         if( !(boolean) this.myInfoMap.get("officer") )
             this.supervisorTextView.setText(this.myInfoMap.get("supervisorId").toString().trim());

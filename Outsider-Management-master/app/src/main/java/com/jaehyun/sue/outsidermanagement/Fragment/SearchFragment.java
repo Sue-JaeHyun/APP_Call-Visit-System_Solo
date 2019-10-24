@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,8 +45,8 @@ public class SearchFragment extends Fragment
 
 
     EditText l_editText,ll_editText;
-    Button btn;
-    Button btn2;
+    ImageButton btn;
+    ImageButton btn2;
     GoogleMap googleMap;
     Double latitude = 0.0;
     Double longitude =0.0;
@@ -93,8 +94,8 @@ public class SearchFragment extends Fragment
         //추가한 것것
         l_editText = (EditText) layout.findViewById(R.id.l_editText);
         ll_editText = (EditText) layout.findViewById(R.id.LL_editText);
-        btn = (Button) layout.findViewById(R.id.s_button);
-        btn2 = (Button) layout.findViewById(R.id.r_button);
+        btn = (ImageButton) layout.findViewById(R.id.s_button);
+        btn2 = (ImageButton) layout.findViewById(R.id.r_button);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
