@@ -57,9 +57,9 @@ Creating an issue on Github
 send me an email(aroa96@naver.com)
 ```
 ## Credit(크레딧)
-# 개발자
-* 중위 서재현
-# Thanks to 국방부 오픈소스 아카데미
+* 개발자
+ * 중위 서재현
+* Thanks to 국방부 오픈소스 아카데미
 
 ## Change Log(업데이트 정보)
 ```c
