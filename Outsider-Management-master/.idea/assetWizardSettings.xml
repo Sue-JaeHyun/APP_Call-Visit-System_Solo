@@ -58,8 +58,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\calendar.png" />
-                                      <entry key="outputName" value="ic_action_callender_cloud" />
+                                      <entry key="imageAsset" value="C:\Users\Admin\Downloads\question.png" />
+                                      <entry key="outputName" value="ic_action_question_cloud" />
                                       <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="000000" />
                                     </map>
@@ -89,7 +89,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="51" />
+                                                <entry key="scalingPercent" value="86" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -111,8 +111,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="foregroundImage" value="C:\new\Outsider-Management-master\Outsider-Management-master\app\src\main\res\drawable\main.png" />
-                                      <entry key="outputName" value="ic_launcher_1" />
+                                      <entry key="foregroundImage" value="C:\Users\Admin\Downloads\notebook.png" />
+                                      <entry key="outputName" value="ic_launcher_2" />
                                     </map>
                                   </option>
                                 </PersistentState>

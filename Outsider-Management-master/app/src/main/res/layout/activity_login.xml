@@ -13,11 +13,11 @@
               android:background="@color/colorYellow"
               tools:context=".Activity.LoginActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="331dp"
-        app:srcCompat="@drawable/main" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            app:srcCompat="@drawable/main" />
 
     <TextView
         android:layout_width="wrap_content"
