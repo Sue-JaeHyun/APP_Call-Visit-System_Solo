@@ -1,6 +1,6 @@
 ## 프로젝트명
 ```c
-Call-Visit-System - 군 내 현재 만연하고 있고 꺼내기 싫어하는 판도라의 상자와 같은 병력관리 문제점을 보완하는
+Call-Visit-System : 군 내 현재 만연하고 있고 꺼내기 싫어하는 판도라의 상자와 같은 병력관리 문제점을 보완하는
                     기능들을 가진 병력관리 서비스앱
                     (출타자 현황관리, 추적관리, 상향식 일일결산, 마음의 편지 기능 보유)
                     
@@ -25,21 +25,21 @@ App 세부 사용방법은 아래 링크를 참조하세요.
 ## File Manifest(파일정보 및 목록)
 
 * Activity
-  * LoginActivity
-  * MainActivity
-  * RegistActivity
-  * SearchActivity
+  * LoginActivity             (로그인 화면 액티비티)
+  * MainActivity              (메인 화면 액티비티)
+  * RegistActivity            (회원등록 액티비티)
+  * SearchActivity            (위치조사 액티비티)
 * Adaptor
-  * CallvisitListAdaptor
-  * MemberListAdaptor
-  * OutsiderManagementAdaptor
-  * ReportListAdaptor
+  * CallvisitListAdaptor      (출타자 현황 리스트)
+  * MemberListAdaptor         (전체 회원 리스트)
+  * OutsiderManagementAdaptor (출타자 관리 리스트)
+  * ReportListAdaptor         (상황,위치보고 목록)
 * Fragment
-  * CallVisitFragment
-  * MyinfoFragment
-  * OutsiderManagementFragment
-  * ReportFragment
-  * SearchFragment
+  * CallVisitFragment         (출타자 현황 프레그먼트)
+  * MyinfoFragment            (내정보 프레그먼트)
+  * OutsiderManagementFragment(출타자 관리 프레그먼트)
+  * ReportFragment            (상황,위치 보고 프레그먼트)
+  * SearchFragment            (위치조사 프레그먼트)
   
 ## Copyrght / End User License(저작권 및 사용권 정보)
 ```c
