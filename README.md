@@ -10,10 +10,10 @@ Call-Visit-System - 군 내 현재 만연하고 있고 꺼내기 싫어하는 �
 1. android 9(API 28)
 
 ## Installing the Source(설치안내)
+1. App 설치는 아래 링크에서 Apk파일을 다운받으시면 됩니다.
 
 ## Getting Started(사용법)
-1. get Clone 후 apk 설치
-2. Apk 실행 
+1. App 세부 사용방법은 아래 링크를 참조하세요.
 
 ## File Manifest(파일정보 및 목록)
 
