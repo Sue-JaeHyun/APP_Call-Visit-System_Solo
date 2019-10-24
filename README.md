@@ -57,12 +57,14 @@ android 9(API 28) 이상 권장
 ```
 ## Installing the Source(설치안내)
 ```c
-App 설치는 아래 링크에서 Apk파일을 다운받으시면 됩니다.
+App 설치는 위 첨부된 Apk파일을 다운받으시면 됩니다.
+혹 Clone 하셔서 직접 Apk를 만드시는 방법도 있습니다.
 ```
 
 ## Getting Started(사용법)
 ```c
-App 세부 사용방법은 아래 링크를 참조하세요.
+실행장면에 주요기능 반영하였습니다.
+App 세부 사용방법은 위 첨부된 ppt를 참조하세요.
 ```
 
 ## File Manifest(파일정보 및 목록)
