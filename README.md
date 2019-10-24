@@ -6,6 +6,8 @@ Call-Visit-System - 군 내 현재 만연하고 있고 꺼내기 싫어하는 �
                     
 개발자 : 중위 서재현
 ```
+## 실행장면
+
 ## Prerequisites(컴퓨터 구성 필수 조건 안내)
 ```c
 android 9(API 28) 이상 권장
