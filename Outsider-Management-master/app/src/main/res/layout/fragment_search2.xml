@@ -22,13 +22,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@android:color/black"
                 android:background="@drawable/border2"
                 android:gravity="center"
-                android:text="경도" />
+                android:text="위도"
+                android:textColor="@android:color/black" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/LL_editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -50,12 +50,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/border2"
-                android:textColor="@android:color/black"
                 android:gravity="center"
-                android:text="위도" />
+                android:text="경도"
+                android:textColor="@android:color/black" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/l_editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -71,11 +71,18 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/s_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="조회" />
+
+            <Button
+                android:id="@+id/r_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="원 위치" />
         </LinearLayout>
 
         <com.google.android.gms.maps.MapView
@@ -83,6 +90,28 @@
             android:name="com.google.android.gms.maps.MapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
+
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:name="@+id/card_view"
+            android:layout_width="400dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            card_view:cardCornerRadius="4dp"
+            >
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                >
+            </fragment>
+
+        </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 

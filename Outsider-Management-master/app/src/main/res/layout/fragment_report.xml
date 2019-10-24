@@ -134,6 +134,15 @@
             android:enabled="false"
             android:id="@+id/report_btn"/>
 
+        <Button
+            android:id="@+id/locate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10sp"
+            android:focusable="false"
+            android:text="위치"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </RelativeLayout>
